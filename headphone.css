@@ -1,0 +1,90 @@
+#small>div{
+   height:280px;
+   width:300px;
+   /* border:1px solid green; */
+   margin-left:60px;
+   margin-right: 60px;
+}
+
+#phone{
+    height:500px;
+    width:100%;
+    /* border:1px solid rgb(223, 28, 28); */
+    /* margin-top:10px; */
+}
+#phone>img{
+    width:100%;
+    height:100%;
+}
+#small{
+    display:flex;
+    height:auto;
+    width:100%;
+    overflow:scroll;
+    /* border:1px solid red; */
+    margin-top:20px;
+
+}
+/* .multi{
+    height:100%;
+    width:85%;
+    border:1px solid red;
+    margin-left:20%;
+    overflow:scroll;
+
+} */
+#part{
+    height:700px;
+    width:100%;
+    border:1px solid green;
+    display:flex;
+}
+/* .filter{
+    height:100%;
+    width:20%;
+    border:1px solid red;
+} */
+#part>div:nth-child(1){
+    height:100%;
+    width:20%;
+    border:1px solid red;
+}
+#part>div:nth-child(2){
+    height:100%;
+    width:80%;
+    border:1px solid red;
+    /* margin-left:20%; */
+    overflow-y:scroll;
+}
+.multi{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,auto);
+    gap:10px;
+  
+}
+.multi>div{
+    border:1px solid blue;
+    height:450px;
+}
+.multi>div>img{
+   height:70%;
+   cursor:pointer;
+   margin-top:20px;
+   /* text-align:center ; */
+}
+button{
+    background-color:blue;
+    color:white;
+    padding:2px;
+    margin-left:2px ;
+}
+.multi>div>h3,p{
+    text-align: center;
+}
+.multi>div>p+p{
+    color:blue;
+}
+.multi>div>p{
+    color:green;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <!-- --------navbar------ -->
+    <div id="navbar">
+        <div class="left">
+            <div>
+                <img id="logo" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTLpkyHplU-2wUqZAysXnRMTWVpdJQWcBNPhHKnlec1F5H60MPo"/>
+            </div>
+        </div>
+        <div class="mid">
+            <p>Categories</p>
+            <p>Brands</p>
+            <p>Price</p>
+            <p>Deals</p>
+            <p>Headphone Finder</p>
+            <p>Headphone Connect</p>
+            <p>Info</p>
+            <p>Help Center</p>
+        </div>
+        <div class="right">
+            <p><a href="search.html">Search</a></p>
+            <p><a href="login.html">Login</a></p>
+            <p><a href="cart.html">Cart</a></p>   
+        </div>
+    </div>
+    <h1>LOGIN</h1>
+    <div id="btn">
+        <div class="facebook" ><a href="https://www.facebook.com/">
+            <img src="https://t2.gstatic.com/images?q=tbn:ANd9GcQ_F3MT8fWqJKN7xeBtmmFQnx_GRCg9s1ic63w8eW7tNnpxst-u"/>
+            <h3>Facebook</h3>
+        </a>
+        </div>
+        <div class="google"><a href="https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?client_id=378826172517-gjhd7esiva3nj7aott9sri1p5sfm4tcu.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fapp.getflits.com%2Fapi%2Fsocial_login%2Fgoogle%2Fauth%2Fcallback&scope=openid%20profile%20email&response_type=code&state=eyJzaG9wX25hbWUiOiJoZWFkcGhvbmUtem9uZS5teXNob3BpZnkuY29tIiwidG9rZW4iOiJhNmRiOTMyMDE5MDViYjFhODllYzlmMDU3ZGE3YTczNiJ9&flowName=GeneralOAuthFlow">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjzC2JyZDZ_RaWf0qp11K0lcvB6b6kYNMoqtZAQ9hiPZ4cTIOB"/>
+            <h3>Google</h3>
+        </a>
+        </div>
+        <div class="twitter"><a href="https://api.twitter.com/oauth/authorize?oauth_token=ebN92AAAAAAA2tl0AAABgI92G9w">
+            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQtE3mAdQfJJDupThZlJoOLrK4NsCrZzbO6HVVMmrwIKiXRRK7J"/>
+            <h3>Twitter</h3>
+        </a>
+        </div>
+    </div>
+    <h3>--------------LOGIN WITH SOCIAL OR------------</h3>
+    <p>Please enter your e-mail and password</p>
+    <form id="form">
+        <input type="text" id="name" placeholder="First name">
+        <input type="text" id="last" placeholder="Last name">
+        <input type="email" id="mail" placeholder="E-mail">
+        <input type="password" id="pass" placeholder="Password">
+        <input type="submit" >
+        <p class="create">Already have an account?
+            <span><a href="login.html">Login</a></span>
+        </p>
+    </form>
+</body>
+</html>
+<script>
+    document.querySelector("#form").addEventListener("submit",detailfnc);
+    var data=JSON.parse(localStorage.getItem("detail"))||[];
+    function detailfnc(){
+        event.preventDefault()
+
+        var detailobj={
+            name:form.name.value,
+            lastname:form.last.value,
+            email:form.mail.value,
+            password:form.pass.value,
+        }
+        // console.log(detailobj)
+        data.push(detailobj)
+        localStorage.setItem("detail",JSON.stringify(data));
+        window.location.href="login.html";
+    }
+</script>
