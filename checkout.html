@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>information-headphone</title>
     <link rel="stylesheet" href="check.css">
 </head>
 <body>
@@ -31,26 +31,83 @@
                 </p>
                 <input type="email" placeholder="Email"/>
                 <div class="check">
-                    <input type="checkbox" name="offer" >offers
-                    <label for="offer">email me with news and offers</label>
-                </div>
-                <div>
                     <div>
-                        <h2>GST details:
-                           <p><span>Is your organisation registerd under GST ACT in india?</span></p>
-                        </h2>
+                        <input type="checkbox" name="offer" >
                     </div>
-                    <div></div>
-                    <div></div>
+                    <div>
+                        <p >email me with news and offers</p>
+                    </div>
                 </div>
-              
+                <h2 class="ship">Shipping address</h2>
+                <select class="avail">
+                    <option value="select country">select country</option>
+                    <option value="India">India</option>
+                    <option value="no option">Other Country</option>
+                </select>
+                <input type="text" placeholder="First name">
+                <input type="text" placeholder="Last name">
+                <input type="text" placeholder="Address">
+                <input type="text" placeholder="City">
+                <select name="State" class="avail">
+                    <option value="State">State</option>
+                    <option value="Andaman & Nicobar">Andaman & Nicobar</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chandigarh">Chandigarh</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="Delhi">Delhi</option>
+                </select>
+                <input type="number">
+                <input type="number">
+                <div class="check">
+                    <div>
+                        <input type="checkbox" name="offer" >
+                    </div>
+                    <div>
+                        <p >Save this information for next time</p>
+                    </div>
+                </div>
+                <button class="pay">Contine to payment method</button>
                 <!-- <p>Cart >
                     <span>Infomation  ></span>
                     <apan>Payment</apan>
                 </p> -->
             </div>
         </div>
-        <div></div>
+        <div id="payment"></div>
     </div>
 </body>
 </html>
+<script>
+    document.querySelector(".pay").addEventListener("click",mypay);
+    function mypay(){
+        console.log("continue")
+        var paydetails=document.createElement("div");
+        paydetails.setAttribute("class","come")
+
+        var card=document.createElement("h2");
+        card.innerText="Credit/Debit Cards";
+        var num=document.createElement("input");
+        num.placeholder="Card Number";
+        var date=document.createElement("input");
+        date.placeholder="Valid day (MM/YY)";
+        var code=document.createElement("input");
+        code.placeholder="CVV";
+        var btn=document.createElement("button");
+        btn.innerText="Pay";
+        btn.addEventListener("click",function(event){
+            calldone()
+        })
+        btn.setAttribute("class","fine")
+        paydetails.append(card,num,date,code,btn)
+        payment.append(paydetails)
+    }
+
+   function calldone(){
+       alert("Payment is successful")
+       window.location.href="index.html"
+   }
+    // function mycom(){
+    //     console.log("hiiiiiiii")
+    // }
+</script>

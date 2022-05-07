@@ -1,0 +1,116 @@
+#product{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,500px);
+    gap:20px;
+    margin-top:0px;
+    margin-left:50px;
+    margin-right:50px;
+
+}
+*{
+    margin:0px;
+    padding:0px;
+}
+#product>div{
+    /* border:1px solid red; */
+    height:500px;
+    width:400px;
+    padding:2px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+/* .card{
+    height:300px;
+    width:300px;
+} */
+.image{
+    height:60%;
+    width:100%;
+}
+select{
+    display:block;
+    margin:auto;
+    width:300px;
+    height:30px;
+
+}
+.tocart{
+    margin-top:20px;
+   background-color: rgb(154, 154, 240);
+   width:150px;
+   color:black;
+   border-radius:10px;
+   border:1px;
+   padding:7px;
+}
+.tocart:hover{
+    color:white;
+    background-color:teal ;
+}
+.btnm{
+    padding:7px;
+    background-color: rgb(249, 33, 33);
+    border:0;
+    border-radius:7px;
+    margin-top:5px;
+    margin-left:10px;
+}
+.btnm:hover{
+    background-color: pink;
+    color:black;
+}
+@media (max-width:902px){
+    #product{
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(6,500px);
+        gap:20px;
+        margin-top:200px;
+        margin-left:10px;
+        margin-right:0px;
+    
+    }
+
+    #product>div{
+        /* border:1px solid red; */
+        height:400px;
+        width:300px;
+        padding:0px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+    #navbar{
+        display:flex;
+        height:80px;
+        width:100%;
+        background-color:white;
+        position:absolute;
+        margin-top:0px;
+      
+        
+      }
+}
+
+.done{
+    padding:10px;
+    width:100px;
+   margin-left:20px;
+   border-radius: 10px;
+}
+.done:hover{
+   cursor:pointer;
+   background-color: orangered;
+   color:black;
+}
+
+#done{
+    padding:10px;
+    width:100px;
+   margin-left:20px;
+   border-radius: 10px;
+   background-color: rgb(237, 25, 25)(237, 25, 25);
+}
+#done:hover{
+   cursor:pointer;
+   background-color: green;
+   color:black;
+}

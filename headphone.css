@@ -67,7 +67,7 @@
     border:1px solid blue;
     height:450px;
 }
-.multi>div>img{
+.multi>div>a>img{
    height:70%;
    cursor:pointer;
    margin-top:20px;
@@ -79,12 +79,12 @@ button{
     padding:2px;
     margin-left:2px ;
 }
-.multi>div>h3,p{
+.multi>div>a>h3,p{
     text-align: center;
 }
-.multi>div>p+p{
+.multi>div>a>p+p{
     color:blue;
 }
-.multi>div>p{
+.multi>div>a>p{
     color:green;
 }

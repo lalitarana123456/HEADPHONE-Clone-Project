@@ -1,0 +1,81 @@
+#cart{
+    /* height:700px;
+    width:100%;
+    border:1px solid ; */
+    display:flex;
+   
+}
+#cart>div{
+    height:600px;
+    width:50%;
+    border:1px solid red;
+    padding:10px;
+    line-height: 40px;
+}
+#cart>div>img{
+    height:100%;
+}
+
+.short{
+    display:flex;
+  
+}
+.short>div{
+    margin-left:10px;
+    height:100px;
+    width:100px; 
+    border:3px solid black;
+
+}
+.short>div:hover{
+    cursor:pointer;
+    height:40px;
+    width:40px;
+  
+}
+.btn{
+    width:80%;
+    margin-left:30px;
+    border-radius: 30px;
+}
+.btn:hover{
+    background-color: rgb(62, 62, 239);
+}
+.price{
+    color:blue;
+    font-size:25px;
+}
+.high{
+    color:red;
+}
+button{
+    background-color:rgb(192, 192, 239);
+    margin-bottom:10px;
+}
+.name{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+@media (max-width:902px){
+    #cart{
+        display:inline;
+       
+    }
+   #cart>div:nth-child(2){
+        width:700px;
+        height:700px;
+        padding:20px;
+    }
+    button{
+        display:block;
+        border-radius:10px;
+        border-color:grey;
+        padding:5px;
+        margin-bottom:10px;
+    }
+    .btn:hover{
+        background-color: red;
+    }
+    p{
+        color:grey;
+    }
+}

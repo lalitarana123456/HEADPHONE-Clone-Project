@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>carts</title>
     <link rel="stylesheet" href="cart.css">
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="drp.css">
     <link rel="stylesheet" href="headphone.css">
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
-  
-      <!-- <--------START NAVBAR---> 
+     <!-- <--------START NAVBAR---> 
+       
         <div id="navbar">
             <div class="left">
                 <div><a href="facebook.com">
@@ -97,203 +98,56 @@
                     <li><a href="https://help.headphonezone.in/support/home">Help Center</a></li>
                     <li><a href="#">Search</a></li>
                     <li><a href="login.html">Login</a></li>
-                    <li><a href="carts.html">Cart</a></li>  
+                    <li><a href="#">Cart</a></li>  
                   </ul>  
             </div>
     </div>
         <!-- ---navbar ending--- -->
-        <select id="" name="">
-            <option value="none">select a catagory</option>
-            <option value="BEST SELLER">BEST SELLER</option>
-            <option value="AWARD WINNER">AWARD WINNER</option>
-            <option value="NEW">NEW</option>
-            <option value="OUR PICK">OUR PICK</option>
-        </select>    
     <div id="product"></div>
 </body>
 </html>
 <script>
-    var prod=[
 
-    {
-        btn:"BEST SELLER",
-        img:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-KZ-ZSN-Pro-X-Black-03_800x.jpg?v=1623407931",
-        name:"KZ - ZSN PRO X",
-        type:"In-Ears With 1 DD+BA Dreivers",
-        price:"Rs 1,799",
-        button:"ADD TO CART",
-    },
+    var cartsdata=JSON.parse(localStorage.getItem("masai-cart"))||[];
 
-
-    {
-        btn:"AWARD WINNER",
-        img:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Final-Audio-E1000-BALCK-No-Mic-03_400x.jpg?v=1632819650",
-        name:"FINAL - E1000",
-        type:"In-Ears With 1 Dynamic Dreivers",
-        price:"Rs 1,799",
-        button:"ADD TO CART",
-    },
-    
-    {
-        btn:"BEST SELLER",
-        img:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-CCA-CRA-Black-5_400x.jpg?v=1648213897",
-        name:"CCA - CRA",
-        type:"In-Ears With 1 Dynamic Dreivers",
-        price:"Rs 1,399",
-        button:"ADD TO CART",
-    },
-
-    {
-        btn:"NEW",
-        img:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-FiiO-JD3-02_400x.jpg?v=1649502893",
-        name:"FIIO - JD3",
-        type:"In-Ears With 1 Dynamic Dreivers",
-        price:"Rs 1,499",
-        button:"ADD TO CART",
-    },
-
-    {
-        btn:"BEST SELLER",
-        img:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Final-Audio-E500-new_400x.jpg?v=1651153077",
-        name:"FINAL - E500",
-        type:"Earphones For Spatial Audio",
-        price:"Rs 1,599",
-        button:"ADD TO CART",
-    },
-
-    {
-        btn:"PRICE DROP",
-        img:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-CCA-C10pro-Black-02_400x.jpg?v=1627994425",
-        name:"CCA - C10 PRO",
-        type:"In-Ears With 1DD + 4BA Driver",
-        price:"Rs 2,799",
-        button:"ADD TO CART",
-    },
-
-    {
-        btn:"BEST SELLER",
-        img:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-SoundMAGIC-E11C-1160-1160-black_400x.jpg?v=1649233095",
-        name:"SOUNDMAGIC - E11C",
-        type:"In-Ears With 1 Dynamic Driver",
-        price:"Rs 2,499",
-        button:"ADD TO CART",
-    },
-
-    {
-        btn:"BEST SELLER",
-        img:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Final-Audio-E2000-Black-01_400x.jpg?v=1651151860",
-        name:"FINAL - E2000",
-        type:"In-Ears With 1 Dynamic Driver",
-        price:"Rs 2,799",
-        button:"ADD TO CART",
-    },
-
-    {
-        btn:"BEST SELLER",
-        img:"https://cdn.shopify.com/s/files/1/0153/8863/products/kz-zs10-pro-headphone-zone-11557477056575_400x.jpg?v=1618074088",
-        name:"KZ - ZS10 PRO",
-        type:"In-Ears With 1 DD + 4 BA Drivers",
-        price:"Rs 4,399",
-        button:"ADD TO CART",
-    },
-
-    {
-        btn:"OUR PICK",
-        img:"https://cdn.shopify.com/s/files/1/0153/8863/products/Silver-01_400x.jpg?v=1614671808",
-        name:"KZ - DQ6",
-        type:"In-Ears With 3 DD Drivers",
-        price:"Rs 2,299",
-        button:"ADD TO CART",
-    },
-
-    {
-        btn:"BEST SELLER",
-        img:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-HiFiMAN-RE800-1160-1160-011_400x.jpg?v=1643803585",
-        name:"HIFIMAN - RE800",
-        type:"In-Ears With 9.2mm Nanotech Topology Dynamic Driver",
-        price:"Rs 11,999",
-        button:"ADD TO CART",
-    },
-
-    {
-        btn:"BEST SELLER",
-        img:"https://cdn.shopify.com/s/files/1/0153/8863/products/Shure-Aonic215-Black-02_400x.jpg?v=1623754224",
-        name:"SHURE - AONIC 215",
-        type:"In-Ears With 1 Dynamic Driver",
-        price:"Rs 8,999",
-        button:"ADD TO CART",
-    },
-
-    {
-        btn:"OUR PICK",
-        img:"https://cdn.shopify.com/s/files/1/0153/8863/products/397b9537bf78aea1a4a4acc4496a47fe_400x.jpg?v=1641184507",
-        name:"1 CUSTOM - JUNIOR",
-        type:"In-Ears With 1 DD + 2 BA Drivers",
-        price:"Rs 15,999",
-        button:"ADD TO CART",
-    },
-    
-];
-
-    localStorage.setItem("headphoneprod",JSON.stringify(prod));
-     var cart=JSON.parse(localStorage.getItem("masai-cart"))||[];
-
-    var product=document.querySelector("#product");
-
-    var filter=document.querySelector("select");
-
-
+    var product=document.querySelector("#product")
     function display(data){
        product.innerHTML=null;
        data.forEach(function(ele){
            var card=document.createElement("div");
-           card.setAttribute("class","cards")
-           var btn1=document.createElement("button");
-           btn1.innerText=ele.btn;
-           btn1.setAttribute("class","btnm")
            var img=document.createElement("img");
            img.src=ele.img;
-           img.setAttribute("class","image")
            var name=document.createElement("h1");
            name.innerText=ele.name;
-           name.setAttribute("class","name")
            var type=document.createElement("p");
            type.innerText=ele.type;
-           type.setAttribute("class","para")
            var price=document.createElement("h3");
            price.innerText=ele.price;
-           price.setAttribute("class","rupee")
            var btn=document.createElement("button");
-           btn.innerText="ADD TO CART"
-           btn.setAttribute("class","tocart")
-           btn.addEventListener("click",function(){
-               addtocart(ele);
+           btn.innerText="Delete"
+           btn.setAttribute("class","done")
+           var check=document.createElement("button");
+           check.innerText="checkout";
+           check.setAttribute("id","done")
+          
+           btn.addEventListener("click",function(event){
+               Delete(ele.productid);
            })
-           card.append(btn1,img,name,type,price,btn)
+           card.append(img,name,type,price,btn,check)
            product.append(card);
        })
     }
-    display(prod)
+    display(cartsdata)
+    document.querySelector("#done").addEventListener("click",myfnc)
+    function myfnc(){
+        window.location.href="checkout.html";
+    }
 
-    filter.addEventListener("change",function(){
-        if(filter.value=="none"){
-            display(prod)
-        }
-        else{
-            var filtered=prod.filter(function(ele){
-               return ele.btn==filter.value;
-            });
-
-            display(filtered)
-        }
-    });
-
-
-    function addtocart(ele){
-       cart.push(ele);
-       localStorage.setItem("masai-cart",JSON.stringify(cart));
-       alert("product added succesfully")
-       window.location.href="carts.html"
-
+    function Delete(id){
+       cartsdata=cartsdata.filter(function(ele){
+           return ele.productid!=id;
+       })
+       display(cartsdata);
+       localStorage.setItem("masai-cart",JSON.stringify(cartsdata));
     }
 </script>
